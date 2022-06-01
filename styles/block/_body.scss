@@ -1,0 +1,17 @@
+.botones{
+    display:flex;
+    justify-content: space-around;
+    
+}
+.botonI, .botonC, .botonD{
+    width: 200px;
+    height: 100px;
+}
+.fondo{
+    display: flex;
+    justify-content: center;
+
+}
+.fondoI{
+    width: 80vw;
+}

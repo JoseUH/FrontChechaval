@@ -1,0 +1,42 @@
+
+.section {
+ 
+
+  @include flexCenter(row, space-around, center);
+
+  background-color: lightcyan;
+  padding: 10px;
+ 
+    
+    
+  }
+  .izquierdo{
+
+    ul {
+      display: flex;
+      gap: 15px;
+  
+      a {
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: #ffcc01;
+          color: black;
+        }
+      }
+    }
+
+  }
+  
+.centro{
+  color: black;
+}
+.derecha{
+  background-color: white;
+}
+.logo{
+  width: 10vw;
+}
