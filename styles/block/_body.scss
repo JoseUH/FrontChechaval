@@ -10,8 +10,20 @@
 .fondo{
     display: flex;
     justify-content: center;
+    &_contenedor-producto{
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        margin: 1rem;
+        padding: 1rem;
+        & > img{
+            width: 15vw;;
+        }
+
+    }
 
 }
 .fondoI{
     width: 80vw;
 }
+

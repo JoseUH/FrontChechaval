@@ -2,7 +2,9 @@ let mesasArray = [];
 let cartasArray = [];
 let pedidosArray = [];
 //LOS NODOS QUE VOY A NECESITAS
-
+const fondoProductos1$$ = document.querySelector(".fondo1");
+const fondoProductos2$$ = document.querySelector(".fondo2");
+const fondoProductos3$$ = document.querySelector(".fondo3");
 
 
 
@@ -29,7 +31,7 @@ const getCartas = async () => {
  */
       //console.log(cartaJSON);
       cartasArray = cartaJSON.Cartas;
-      //filtradoRubia(cartasArray);
+      pintarProductos(cartasArray);
 };
 
 const getMesas = async () => {
@@ -55,14 +57,57 @@ getMesas();
 getCartas();
 getPedidos();
 
-const filtradoRubia = async (cartasArray) => {
-    const productoRubia = [];
-    /* for (const producto of cartasArray) {
-        if(producto.tipo === "rubia"){
-            productoRubia.push(producto);
-        }    
-    } */
-    console.log(cartasArray[[PromiseResult]]);
+const pintarProductos = async (cartasArray) => {
+    let divFondo1 = "";
+    let divFondo2 = "";
+    let divFondo3 = "";
+    fondoProductos1$$.setAttribute("display", "flex");
+    fondoProductos2$$.setAttribute("display", "none");
+    fondoProductos3$$.setAttribute("display", "none");
+    for (const producto of cartasArray) {
+        //console.log(producto);
+        //alert(producto.tipo);
+        switch (producto.tipo) {
+            
+            case "rubia":
+                divFondo1 += `
+                <div class="fondo_contenedor-producto">
+                <label>${producto.producto}</label>
+                <img src="${producto.imagen}" alt="${producto.producto}">
+                <p>${producto.descripcion}<p>
+                <button>+</button>
+                </div>
+            `; 
+
+                break;
+            case "Coctel":
+                divFondo2 += `
+                <div class="fondo_contenedor-producto">
+                <label>${producto.producto}</label>
+                <img src="${producto.imagen}" alt="${producto.producto}">
+                <p>${producto.descripcion}<p>
+                <button>+</button>
+                </div>
+            `;
+                break;
+            case "sin alcohol":
+                divFondo3 += `
+                    <div class="fondo_contenedor-producto">
+                    <label>${producto.producto}</label>
+                    <img src="${producto.imagen}" alt="${producto.producto}">
+                    <p>${producto.descripcion}<p>
+                    <button>+</button>
+                    </div>
+                `;
+                break;                
+        }
+    }
+
+    //alert(divFondo1);
+
+    fondoProductos1$$.innerHTML = divFondo1;
+    fondoProductos2$$.innerHTML = divFondo2;
+    fondoProductos3$$.innerHTML = divFondo3;
     
 }
 

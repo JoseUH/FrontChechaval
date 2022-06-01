@@ -82,6 +82,23 @@ body {
           justify-content: center;
 }
 
+.fondo_contenedor-producto {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.fondo_contenedor-producto > img {
+  width: 15vw;
+}
+
 .fondoI {
   width: 80vw;
 }
