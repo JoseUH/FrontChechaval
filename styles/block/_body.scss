@@ -10,6 +10,7 @@ body{
       }
 height: 20vh;
 }
+
 .botones{
     @include tablet {
         display: flex;
@@ -18,8 +19,11 @@ height: 20vh;
         gap: 10px;
         height: 10vh;
       }
+    
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 2rem 0rem 2rem 0rem;
+    
     
     
     
@@ -44,6 +48,7 @@ height: 20vh;
     font-size: 20px;
     font-weight: bold;
     color: lightyellow;
+    margin: 0rem 7rem 0rem 7rem;
 } .botonD{
       
     background-image: url("https://thumbs.dreamstime.com/z/sello-de-goma-sin-alcohol-80228808.jpg");
@@ -78,6 +83,9 @@ height: 20vh;
         padding: 1rem;
         & > img{
             width: 10vw;
+        }
+        & > p{
+            text-align: center;
         }
         
 

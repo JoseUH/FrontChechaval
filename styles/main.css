@@ -85,8 +85,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0rem 2rem 0rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -130,6 +132,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: lightyellow;
+  margin: 0rem 7rem 0rem 7rem;
 }
 
 .botonD {
@@ -176,6 +179,10 @@ body {
 
 .fondo_contenedor-producto > img {
   width: 10vw;
+}
+
+.fondo_contenedor-producto > p {
+  text-align: center;
 }
 
 .buttonPlus {
