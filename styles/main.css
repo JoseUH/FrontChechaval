@@ -1,0 +1,88 @@
+/* colors: */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightcyan;
+  padding: 10px;
+}
+
+.izquierdo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.izquierdo ul a {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.izquierdo ul a:hover {
+  background-color: #ffcc01;
+  color: black;
+}
+
+.centro {
+  color: black;
+}
+
+.derecha {
+  background-color: white;
+}
+
+.logo {
+  width: 10vw;
+}
+
+.botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.botonI, .botonC, .botonD {
+  width: 200px;
+  height: 100px;
+}
+
+.fondo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fondoI {
+  width: 80vw;
+}
+/*# sourceMappingURL=main.css.map */
