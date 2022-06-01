@@ -1,11 +1,62 @@
+body{
+    background-image: url("https://img.freepik.com/vector-gratis/coctel-tropical-bebida-alcoholica-fria-exotica-dibujada-mano-sobre-fondo-hojas-palma-estilo-minimalista-bar-bebidas-decoracion-garabato-cartel-moda-ilustracion-vectorial-aislado-sobre-fondo-blanco_206606-78.jpg?w=2000");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+.space{
+    @include tablet {
+        
+        height: 10vh;
+      }
+height: 20vh;
+}
 .botones{
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        height: 10vh;
+      }
     display:flex;
     justify-content: space-around;
     
+    
+    
 }
-.botonI, .botonC, .botonD{
+.botonI{
+    background-image: url("https://assets-global.website-files.com/5f4f67c5950db17954dd4f52/61fc0c76c6f09009b71af7e1_Las%20cervezas%20m%C3%A1s%20populares%20del%20mundo.jpg");
+    background-size: 100%;
     width: 200px;
     height: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 1px 17px 2px rgba(0,0,0,0.46);
+    font-size: 20px;
+    font-weight: bold;
+    color: lightyellow;
+} .botonC{
+    background-image: url("https://www.losvinos.com.ar/wp-content/uploads/2019/07/cocteles-unicos-Mujeres.jpg");
+    background-size: 100%;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 1px 17px 2px rgba(0,0,0,0.46);
+    font-size: 20px;
+    font-weight: bold;
+    color: lightyellow;
+} .botonD{
+      
+    background-image: url("https://thumbs.dreamstime.com/z/sello-de-goma-sin-alcohol-80228808.jpg");
+    background-size: 100% 110%;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 1px 17px 2px rgba(0,0,0,0.46);
+    font-size: 20px;
+    font-weight: bold;
+    color: lightyellow;
+
+   
 }
 
 
