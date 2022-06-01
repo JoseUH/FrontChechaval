@@ -7,6 +7,13 @@ const fondoProductos2$$ = document.querySelector(".cocktel");
 const fondoProductos3$$ = document.querySelector(".sinAlcohol");
 
 
+//botones
+
+
+document.querySelector(".botonI").setAttribute("onclick", "mostrar('cerveza')");;
+document.querySelector(".botonC").setAttribute("onclick", "mostrar('cocktel')");;
+document.querySelector(".botonD").setAttribute("onclick", "mostrar('sinAlcohol')");;
+
 
 const getCartas = async () => {
     //pokemonJSONArray = [];
@@ -100,12 +107,35 @@ const pintarProductos = async (cartasArray) => {
         }
     }
 
+
     //alert(divFondo1);
 
     fondoProductos1$$.innerHTML = divFondo1;
     fondoProductos2$$.innerHTML = divFondo2;
     fondoProductos3$$.innerHTML = divFondo3;
+
     
+}
+
+
+const mostrar = (tipo) => {
+    switch (tipo){
+        case "cerveza":
+            fondoProductos1$$.style.display = 'flex';
+            fondoProductos2$$.style.display = 'none';
+            fondoProductos3$$.style.display = 'none';
+            break;
+        case "cocktel":
+            fondoProductos1$$.style.display = 'none';
+            fondoProductos2$$.style.display = 'flex';
+            fondoProductos3$$.style.display = 'none';
+            break;
+        case "sinAlcohol":
+            fondoProductos1$$.style.display = 'none';
+            fondoProductos2$$.style.display = 'none';
+            fondoProductos3$$.style.display = 'flex';
+            break;
+    }
 }
 
 
