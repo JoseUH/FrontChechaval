@@ -7,22 +7,48 @@
     width: 200px;
     height: 100px;
 }
+
+
 .fondo{
+
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
+    
     &_contenedor-producto{
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        width: 10vw;
+        max-width: 15vw;
+    
         border: 1px solid black;
         margin: 1rem;
         padding: 1rem;
         & > img{
-            width: 15vw;;
+            width: 10vw;
         }
+        
 
     }
 
 }
+
+.buttonPlus{
+    width: 100%;
+    height: 10vh;;
+}
+
+.cerveza{
+    display: flex;
+}
+.cocktel{
+    display: none;
+}
+.sinAlcohol{
+    display: none;
+}
+
 .fondoI{
     width: 80vw;
 }

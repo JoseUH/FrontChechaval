@@ -2,9 +2,9 @@ let mesasArray = [];
 let cartasArray = [];
 let pedidosArray = [];
 //LOS NODOS QUE VOY A NECESITAS
-const fondoProductos1$$ = document.querySelector(".fondo1");
-const fondoProductos2$$ = document.querySelector(".fondo2");
-const fondoProductos3$$ = document.querySelector(".fondo3");
+const fondoProductos1$$ = document.querySelector(".cerveza");
+const fondoProductos2$$ = document.querySelector(".cocktel");
+const fondoProductos3$$ = document.querySelector(".sinAlcohol");
 
 
 
@@ -61,9 +61,6 @@ const pintarProductos = async (cartasArray) => {
     let divFondo1 = "";
     let divFondo2 = "";
     let divFondo3 = "";
-    fondoProductos1$$.setAttribute("display", "flex");
-    fondoProductos2$$.setAttribute("display", "none");
-    fondoProductos3$$.setAttribute("display", "none");
     for (const producto of cartasArray) {
         //console.log(producto);
         //alert(producto.tipo);
@@ -75,7 +72,7 @@ const pintarProductos = async (cartasArray) => {
                 <label>${producto.producto}</label>
                 <img src="${producto.imagen}" alt="${producto.producto}">
                 <p>${producto.descripcion}<p>
-                <button>+</button>
+                <button class="buttonPlus">+</button>
                 </div>
             `; 
 
@@ -86,7 +83,7 @@ const pintarProductos = async (cartasArray) => {
                 <label>${producto.producto}</label>
                 <img src="${producto.imagen}" alt="${producto.producto}">
                 <p>${producto.descripcion}<p>
-                <button>+</button>
+                <button class="buttonPlus">+</button>
                 </div>
             `;
                 break;
@@ -96,7 +93,7 @@ const pintarProductos = async (cartasArray) => {
                     <label>${producto.producto}</label>
                     <img src="${producto.imagen}" alt="${producto.producto}">
                     <p>${producto.descripcion}<p>
-                    <button>+</button>
+                    <button class="buttonPlus">+</button>
                     </div>
                 `;
                 break;                
