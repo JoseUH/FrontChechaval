@@ -209,7 +209,7 @@ const addItem = (id, producto, precio) => {
   const inputProducto$$ = document.createElement('input');
 
   inputProducto$$.setAttribute("type", "hidden");
-  inputProducto$$.setAttribute("class", "id_carta"); 
+  inputProducto$$.setAttribute("name", "id_carta"); 
   inputProducto$$.setAttribute("value", ""+id+"");  
 
   divAddItem$$.className = 'divAddItem1';
