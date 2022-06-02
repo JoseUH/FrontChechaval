@@ -168,7 +168,16 @@ const pintarMesas = async (mesasArray, zona) => {
     div$$.className = 'mesasUnicas';
     divPrincipal$$.appendChild(div$$);
   }
-};
+}
+
+const asignarMesa = (idMesa) => {
+  document.getElementById('mesaSeleccionada').value = idMesa;
+  document.querySelector('.mesasSection').style.display = 'none';
+  document.querySelector('.productosSection').style.display = 'block';
+  document.querySelector('.carritoSection').style.display = 'flex';
+}
+
+
 
 const mostrar = (tipo) => {
   switch (tipo) {

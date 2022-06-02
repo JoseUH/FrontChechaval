@@ -34,19 +34,17 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
-}
-
-.izquierdo ul a {
-  color: black;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.izquierdo ul a:hover {
-  background-color: #ffcc01;
-  color: black;
+  /* a {
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: #ffcc01;
+          color: black;
+        }
+      } */
 }
 
 .centro {
@@ -259,6 +257,38 @@ body {
   width: 80vw;
 }
 
+.contenedorMesas {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.contenedorMesas .mesasUnicas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: bisque;
+  width: 15vw;
+  max-width: 15vw;
+  text-align: center;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
 
 .fondo_contenedor-producto {
   background-color: #F5E9E2;
@@ -303,40 +333,21 @@ body {
 .producto:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-
 }
 
-.contenedorMesas {
-  margin-top: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-.contenedorMesas .mesasUnicas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+.carritoSection {
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: bisque;
-  width: 15vw;
-  max-width: 15vw;
-  text-align: center;
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 1rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+section {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
