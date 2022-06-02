@@ -117,7 +117,7 @@ const pintarProductos = async (cartasArray) => {
                 <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
                 <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
-                <button class="buttonPlus">+</button>
+                <button class="buttonPlus" onclick = "addItem('${producto._id}', '${producto.producto}', '${producto.precio}')">+</button>
                 </div>
             `;
         break;
@@ -128,7 +128,7 @@ const pintarProductos = async (cartasArray) => {
                     <img class="producto"src="${producto.imagen}" alt="${producto.producto}">
                     <p class="texto">${producto.descripcion}<p>
                     <p><strong>${producto.precio} €</strong><p>
-                    <button class="buttonPlus">+</button>
+                    <button class="buttonPlus" onclick = "addItem('${producto._id}', '${producto.producto}', '${producto.precio}')">+</button>
                     </div>
                 `;
 
@@ -198,10 +198,14 @@ const addItem = (id, producto, precio) => {
   const pPrecio$$ = document.createElement('p');
   const removeItem$$ = document.createElement('button');
 
+  divAddItem$$.className = 'divAddItem1';
+pID$$.className = 'pID1';
+removeItem$$.className = 'Quitar1'
+
   pID$$.innerText = id;
   pProducto$$.innerText = producto;
-  pPrecio$$.innerText = precio;
-  removeItem$$.innerText = "Quitar";
+  pPrecio$$.innerText = precio + '€';
+  removeItem$$.innerText = 'Quitar';
 
   divAddItem$$.appendChild(pID$$);
   divAddItem$$.appendChild(pProducto$$);

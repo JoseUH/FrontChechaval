@@ -1,0 +1,42 @@
+.chango {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px;
+  gap: 20px;
+}
+
+.divAddItem1 {
+  color: white;
+  font-size: 15px;
+  border: lightcoral solid 2px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  width: 10vw;
+  object-fit: cover;
+  text-align: center;
+  &:hover {
+      transform: scale(1.1);
+      
+      background-color: #F5E9E2;
+      transition: transform .5s;
+      color: black;
+}
+}
+
+.pID1{
+    display: none;
+}
+
+.Quitar1 {
+    &:hover {
+        transform: scale(1.3);
+        background-color: #D44D5C;
+        transition: transform .30s;
+    
+    }
+}
