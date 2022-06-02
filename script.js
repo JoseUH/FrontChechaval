@@ -117,7 +117,7 @@ const pintarProductos = async (cartasArray) => {
                 <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
                 <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
-                <button class="buttonPlus">+</button>
+                <button class="buttonPlus" onclick = "addItem('${producto._id}', '${producto.producto}', '${producto.precio}')">+</button>
                 </div>
             `;
         break;
@@ -128,7 +128,7 @@ const pintarProductos = async (cartasArray) => {
                     <img class="producto"src="${producto.imagen}" alt="${producto.producto}">
                     <p class="texto">${producto.descripcion}<p>
                     <p><strong>${producto.precio} €</strong><p>
-                    <button class="buttonPlus">+</button>
+                    <button class="buttonPlus" onclick = "addItem('${producto._id}', '${producto.producto}', '${producto.precio}')">+</button>
                     </div>
                 `;
 
@@ -159,7 +159,8 @@ const pintarMesas = async (mesasArray, zona) => {
     p1$$.innerText = mesas.name;
     p2$$.innerText = mesas.comensales;
     button1$$.setAttribute('onclick', "asignarMesa('" + mesas._id + "')");
-    button1$$.innerText = '+';
+    button1$$.innerText = 'Add';
+    pPrincipal$$.className ="tituloMesa"
     div$$.appendChild(p1$$);
     div$$.appendChild(p2$$);
     div$$.appendChild(button1$$);
@@ -206,10 +207,14 @@ const addItem = (id, producto, precio) => {
   const pPrecio$$ = document.createElement('p');
   const removeItem$$ = document.createElement('button');
 
+  divAddItem$$.className = 'divAddItem1';
+pID$$.className = 'pID1';
+removeItem$$.className = 'Quitar1'
+
   pID$$.innerText = id;
   pProducto$$.innerText = producto;
-  pPrecio$$.innerText = precio;
-  removeItem$$.innerText = "Quitar";
+  pPrecio$$.innerText = precio + '€';
+  removeItem$$.innerText = 'Quitar';
 
   divAddItem$$.appendChild(pID$$);
   divAddItem$$.appendChild(pProducto$$);
