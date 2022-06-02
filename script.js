@@ -6,6 +6,8 @@ const mesasSection$$ = document.querySelector(".contenedorMesas");
 const fondoProductos1$$ = document.querySelector(".cerveza");
 const fondoProductos2$$ = document.querySelector(".cocktel");
 const fondoProductos3$$ = document.querySelector(".sinAlcohol");
+const chango$$ = document.querySelector(".chango");
+const buttonPlus$$ = document.querySelectorAll(".buttonPlus")
 
 
 //botones
@@ -90,6 +92,8 @@ const getPedidos = async () => {
 getMesas();
 getCartas();
 getPedidos();
+// addItem(producto._id, producto.producto, producto.precio);
+
 
 const pintarProductos = async (cartasArray) => {
     let divFondo1 = "";
@@ -107,7 +111,7 @@ const pintarProductos = async (cartasArray) => {
                 <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
                 <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
-                <button class="buttonPlus">+</button>
+                <button class="buttonPlus" onclick = "addItem('${producto._id}', '${producto.producto}', '${producto.precio}')">+</button>
                 </div>
             `;
 
@@ -133,8 +137,11 @@ const pintarProductos = async (cartasArray) => {
                     <button class="buttonPlus">+</button>
                     </div>
                 `;
+
                 break;
+
         }
+        
     }
 
 
@@ -201,4 +208,45 @@ const mostrar = (tipo) => {
 
 
 
+
+
+const addItem = (id, producto, precio) => {
+    const divAddItem$$ = document.createElement("div");
+    const pID$$ = document.createElement("p")
+    const pProducto$$ = document.createElement("p")
+    const pPrecio$$ = document.createElement("p")
+
+    pID$$.innerText = id;
+    pProducto$$.innerText = producto;
+    pPrecio$$.innerText = precio;
+
+    
+    divAddItem$$.appendChild(pID$$);
+    divAddItem$$.appendChild(pProducto$$);
+    divAddItem$$.appendChild(pPrecio$$);
+    chango$$.appendChild(divAddItem$$)
+
+}
+
+
+
+
+
+// const addToCart = () => {
+//     const li$$ = document.createElement("li")
+//     const button1$$ = document.createElement("button")
+//     const p1$$ = document.createElement("p")
+
+//     p1$$.innerText = input$$.value;
+
+//     li$$.appendChild(p1$$)
+//     li$$.appendChild(button1$$)
+//     ul$$.appendChild(li$$)
+    
+//     const borrar = (event) => {
+//         event.remove()
+//     }
+//     button1$$.addEventListener('click', ()=>borrar (li$$));
+
+// }
 
