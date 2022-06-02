@@ -170,12 +170,12 @@ const pintarMesas = async (mesasArray, zona) => {
     divPrincipal$$.appendChild(div$$);
   }
 }
-
+//esto visibiliza los sections
 const asignarMesa = (idMesa) => {
   document.getElementById('mesaSeleccionada').value = idMesa;
-  document.querySelector('.mesasSection').style.display = 'none';
+  document.querySelector('.contenedorMesas').style.display = 'none';
   document.querySelector('.productosSection').style.display = 'block';
-  document.querySelector('.carritoSection').style.display = 'flex';
+  document.querySelector('.carritoSection').style.display = 'block';
 }
 
 
