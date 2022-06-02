@@ -20,7 +20,7 @@ document
 const getCartas = async () => {
   //pokemonJSONArray = [];
 
-  const cartaURL = 'http://localhost:8069/cartas';
+  const cartaURL = 'https://trabajoengrupo.vercel.app/cartas';
   //console.log(cartaURL);
   const cartaAPI = await fetch(cartaURL);
   const cartaJSON = await cartaAPI.json();
@@ -47,7 +47,7 @@ const getMesas = async () => {
   for (let index = 0; index < 3; index++) {
     switch (index) {
       case 0:
-        const mesasSalonURL = 'http://localhost:8069/mesas/zona/salon';
+        const mesasSalonURL = 'https://trabajoengrupo.vercel.app/mesas/zona/salon';
         //console.log(mesasURL);
         const mesasSalonAPI = await fetch(mesasSalonURL);
         const mesasSalonJSON = await mesasSalonAPI.json();
@@ -57,7 +57,7 @@ const getMesas = async () => {
         break;
       case 1:
         const mesasTerrazaCuURL =
-          'http://localhost:8069/mesas/zona/terraza cubierta';
+          'https://trabajoengrupo.vercel.app/mesas/zona/terraza cubierta';
         //console.log(mesasURL);
         const mesasTerrazaCuAPI = await fetch(mesasTerrazaCuURL);
         const mesasTerrazaCuJSON = await mesasTerrazaCuAPI.json();
@@ -66,7 +66,7 @@ const getMesas = async () => {
         break;
       case 2:
         const mesasTerrazaExURL =
-          'http://localhost:8069/mesas/zona/terraza exterior';
+          'https://trabajoengrupo.vercel.app/mesas/zona/terraza exterior';
         //console.log(mesasURL);
         const mesasTerrazaExAPI = await fetch(mesasTerrazaExURL);
         const mesasTerrazaExJSON = await mesasTerrazaExAPI.json();
@@ -78,7 +78,7 @@ const getMesas = async () => {
 };
 
 const getPedidos = async () => {
-  const pedidosURL = 'http://localhost:8069/pedidos';
+  const pedidosURL = 'https://trabajoengrupo.vercel.app/pedidos';
   //console.log(mesasURL);
   const pedidosAPI = await fetch(pedidosURL);
   const pedidosJSON = await pedidosAPI.json();
