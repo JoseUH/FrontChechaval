@@ -357,6 +357,14 @@ body .botones .botonD:hover {
           transform: scale(1.5);
 }
 
+.carritoSection {
+  background-image: url("https://img.freepik.com/vector-gratis/cerveza-burbujas-espuma-fondo_107791-2563.jpg");
+  background-size: 100vw 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .chango {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,11 +375,12 @@ body .botones .botonD:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 15px;
-  gap: 20px;
+  gap: 17px;
 }
 
 .divAddItem1 {
   color: white;
+  background-color: lightgray;
   font-size: 15px;
   border: lightcoral solid 2px;
   border-radius: 3px;
@@ -389,6 +398,8 @@ body .botones .botonD:hover {
           align-items: center;
   height: 30vh;
   width: 10vw;
+  padding: 20px;
+  margin: 30px 30px 15px 30px;
   -o-object-fit: cover;
      object-fit: cover;
   text-align: center;
@@ -417,5 +428,30 @@ body .botones .botonD:hover {
   transition: -webkit-transform .30s;
   transition: transform .30s;
   transition: transform .30s, -webkit-transform .30s;
+}
+
+.divBtnCompra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.btnCompra {
+  margin-bottom: 10px;
+  width: 17rem;
+  height: 5rem;
+  border-radius: 4px;
+}
+
+.btnCompra:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=main.css.map */
