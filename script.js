@@ -2,6 +2,7 @@ let mesasArray = [];
 let cartasArray = [];
 let pedidosArray = [];
 //LOS NODOS QUE VOY A NECESITAS
+const mesasSection$$ = document.querySelector(".contenedorMesas");
 const fondoProductos1$$ = document.querySelector(".cerveza");
 const fondoProductos2$$ = document.querySelector(".cocktel");
 const fondoProductos3$$ = document.querySelector(".sinAlcohol");
@@ -19,7 +20,7 @@ document.querySelector(".botonD").setAttribute("onclick", "mostrar('sinAlcohol')
 
 const getCartas = async () => {
     //pokemonJSONArray = [];
-    
+
     const cartaURL = "http://localhost:8069/cartas";
     //console.log(cartaURL);
     const cartaAPI = await fetch(cartaURL);
@@ -38,18 +39,44 @@ const getCartas = async () => {
         updatedAt: Cartas.updatedAt,
       }));
  */
-      //console.log(cartaJSON);
-      cartasArray = cartaJSON.Cartas;
-      pintarProductos(cartasArray);
+    //console.log(cartaJSON);
+    cartasArray = cartaJSON.Cartas;
+    pintarProductos(cartasArray);
 };
 
+
 const getMesas = async () => {
-    const mesasURL = "http://localhost:8069/mesas";
-    //console.log(mesasURL);
-    const mesasAPI = await fetch(mesasURL);
-    const mesasJSON = await mesasAPI.json();
-    mesasArray = mesasJSON.Mesas;
-    
+    for (let index = 0; index < 3; index++) {
+        switch (index) {
+            case 0:
+                const mesasSalonURL = "http://localhost:8069/mesas/zona/salon";
+                //console.log(mesasURL);
+                const mesasSalonAPI = await fetch(mesasSalonURL);
+                const mesasSalonJSON = await mesasSalonAPI.json();
+                mesasSalonArray = mesasSalonJSON.Mesa;
+                //console.log(mesasSalonArray);
+                pintarMesas(mesasSalonArray, "salon");
+                break;
+            case 1:
+                const mesasTerrazaCuURL = "http://localhost:8069/mesas/zona/terraza cubierta";
+                //console.log(mesasURL);
+                const mesasTerrazaCuAPI = await fetch(mesasTerrazaCuURL);
+                const mesasTerrazaCuJSON = await mesasTerrazaCuAPI.json();
+                mesasTerrazaCuArray = mesasTerrazaCuJSON.Mesa;
+                pintarMesas(mesasTerrazaCuArray, "terraza cubierta");
+                break;
+            case 2:
+                const mesasTerrazaExURL = "http://localhost:8069/mesas/zona/terraza exterior";
+                //console.log(mesasURL);
+                const mesasTerrazaExAPI = await fetch(mesasTerrazaExURL);
+                const mesasTerrazaExJSON = await mesasTerrazaExAPI.json();
+                mesasTerrazaExArray = mesasTerrazaExJSON.Mesa;
+                pintarMesas(mesasTerrazaExArray, "terraza exterior");
+                break;
+        }
+
+    }
+
 }
 
 const getPedidos = async () => {
@@ -61,7 +88,7 @@ const getPedidos = async () => {
 }
 
 
-    
+
 getMesas();
 getCartas();
 getPedidos();
@@ -76,25 +103,25 @@ const pintarProductos = async (cartasArray) => {
         //console.log(producto);
         //alert(producto.tipo);
         switch (producto.tipo) {
-            
+
             case "rubia":
                 divFondo1 += `
                 <div class="fondo_contenedor-producto">
                 <label>${producto.producto}</label>
-                <img src="${producto.imagen}" alt="${producto.producto}">
-                <p>${producto.descripcion}<p>
+                <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
+                <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
                 <button class="buttonPlus" onclick = "addItem('${producto._id}', '${producto.producto}', '${producto.precio}')">+</button>
                 </div>
-            `; 
+            `;
 
                 break;
             case "Coctel":
                 divFondo2 += `
                 <div class="fondo_contenedor-producto">
                 <label>${producto.producto}</label>
-                <img src="${producto.imagen}" alt="${producto.producto}">
-                <p>${producto.descripcion}<p>
+                <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
+                <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
                 <button class="buttonPlus">+</button>
                 </div>
@@ -104,13 +131,15 @@ const pintarProductos = async (cartasArray) => {
                 divFondo3 += `
                     <div class="fondo_contenedor-producto">
                     <label>${producto.producto}</label>
-                    <img src="${producto.imagen}" alt="${producto.producto}">
-                    <p>${producto.descripcion}<p>
+                    <img class="producto"src="${producto.imagen}" alt="${producto.producto}">
+                    <p class="texto">${producto.descripcion}<p>
                     <p><strong>${producto.precio} €</strong><p>
                     <button class="buttonPlus">+</button>
                     </div>
                 `;
-                break;      
+
+                break;
+
         }
         
     }
@@ -122,12 +151,43 @@ const pintarProductos = async (cartasArray) => {
     fondoProductos2$$.innerHTML = divFondo2;
     fondoProductos3$$.innerHTML = divFondo3;
 
-    
+
 }
+
+const pintarMesas = async (mesasArray, zona) => {
+    console.log(mesasArray);
+    let divPrincipal$$ = document.createElement("div");
+    let pPrincipal$$ = document.createElement("h1");
+    pPrincipal$$.innerText = zona;
+    divPrincipal$$.appendChild(pPrincipal$$);
+    mesasSection$$.appendChild(divPrincipal$$);
+    for (const mesas of mesasArray) {
+            let div$$ = document.createElement("div")
+            let button1$$ = document.createElement("button")
+            let p1$$ = document.createElement("p")
+            let p2$$ = document.createElement("p")
+        
+            p1$$.innerText = mesas.name;
+            p2$$.innerText = mesas.comensales;
+            button1$$.setAttribute("onclick", "asignarMesa('" + mesas._id + "')");
+            button1$$.innerText = "+";
+            div$$.appendChild(p1$$);
+            div$$.appendChild(p2$$);
+            div$$.appendChild(button1$$);
+            
+            mesasSection$$.appendChild(div$$);
+            div$$.className = "mesasUnicas";
+            divPrincipal$$.appendChild(div$$);
+
+    }
+        
+}
+
+  
 
 
 const mostrar = (tipo) => {
-    switch (tipo){
+    switch (tipo) {
         case "cerveza":
             fondoProductos1$$.style.display = 'flex';
             fondoProductos2$$.style.display = 'none';
@@ -145,6 +205,7 @@ const mostrar = (tipo) => {
             break;
     }
 }
+
 
 
 
