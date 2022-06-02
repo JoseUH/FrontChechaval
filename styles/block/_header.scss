@@ -1,47 +1,30 @@
-
 .section {
- 
-
   @include flexCenter(row, space-around, center);
   position: fixed;
 
-  background-color: #E3B5A4;
+  background-color: #e3b5a4;
   width: 100vw;
- 
-    
-    
-  }
-  .izquierdo{
-    
 
+  .izquierdo {
     ul {
       display: flex;
       gap: 15px;
-  
-      a {
-        color: black;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 10px;
-        border-radius: 10px;
-        &:hover {
-          background-color: #ffcc01;
-          color: black;
-        }
       }
+    }
+    .centro {
+      color: black;
+    }
+    .derecha {
+      background-color: white;
+    }
+    .logo {
+      width: 6vw;
+    }
+    .carrito {
+      width: 6vw;
     }
 
   }
+
   
-.centro{
-  color: black;
-}
-.derecha{
-  background-color: white;
-}
-.logo{
-  width: 6vw;
-}
-.carrito{
-  width: 6vw ;
-}
+
