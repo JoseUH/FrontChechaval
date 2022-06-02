@@ -104,8 +104,8 @@ const pintarProductos = async (cartasArray) => {
                 divFondo1 += `
                 <div class="fondo_contenedor-producto">
                 <label>${producto.producto}</label>
-                <img src="${producto.imagen}" alt="${producto.producto}">
-                <p>${producto.descripcion}<p>
+                <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
+                <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
                 <button class="buttonPlus">+</button>
                 </div>
@@ -116,8 +116,8 @@ const pintarProductos = async (cartasArray) => {
                 divFondo2 += `
                 <div class="fondo_contenedor-producto">
                 <label>${producto.producto}</label>
-                <img src="${producto.imagen}" alt="${producto.producto}">
-                <p>${producto.descripcion}<p>
+                <img class="producto" src="${producto.imagen}" alt="${producto.producto}">
+                <p class="texto">${producto.descripcion}<p>
                 <p><strong>${producto.precio} €</strong><p>
                 <button class="buttonPlus">+</button>
                 </div>
@@ -127,8 +127,8 @@ const pintarProductos = async (cartasArray) => {
                 divFondo3 += `
                     <div class="fondo_contenedor-producto">
                     <label>${producto.producto}</label>
-                    <img src="${producto.imagen}" alt="${producto.producto}">
-                    <p>${producto.descripcion}<p>
+                    <img class="producto"src="${producto.imagen}" alt="${producto.producto}">
+                    <p class="texto">${producto.descripcion}<p>
                     <p><strong>${producto.precio} €</strong><p>
                     <button class="buttonPlus">+</button>
                     </div>
