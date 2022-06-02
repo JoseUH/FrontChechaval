@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheChaval</title>
     <script src="script.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <link rel="stylesheet" href="./styles/main.css">
 
 </head>
@@ -14,7 +15,7 @@
         <section class="section">
             <div class="izquierdo">             
             <ul>
-                <li><img class="carrito" src="https://techshareroom.com/techshareroom_wiki/images/2/2e/ComprasGeneral.png" alt=""></i></li>
+                <li><a href="#carritoSec"><img class="carrito" src="https://techshareroom.com/techshareroom_wiki/images/2/2e/ComprasGeneral.png" alt="" ></a></li>
             </ul>
            
        </div>
@@ -26,15 +27,20 @@
        </div>
         </section>
     </header>
+<<<<<<< HEAD
+    <main class="mesasSection">
+        <div class="space">
+=======
     <section>
         <div class="spaces">
+>>>>>>> master
 
         </div>     
         <div class="contenedorMesas">
 
         </div>   
-    </section>
-    <main>
+    </main>
+    <section class="productosSection">
         <div class="space">
 
         </div>
@@ -56,17 +62,18 @@
 
         
 
-    </main>
-
+    </section>
+    <section class="carritoSection" id="carritoSec">
+        <form action="http://localhost:8069/pedidos" method="post">
+            <input type="hidden" name="id_carta" id="mesaSeleccionada" value="vacio">
+            <input type="hidden" name="precio" value="69">
+            <div class="chango">
+                
+           
     
-        <div class="chango">
-            
-       
-
-        </div>
-    
-    
-    
-    
+            </div>
+            <button type="submit">COMPRAR</button>
+        </form>
+    </section>
 </body>
 </html>

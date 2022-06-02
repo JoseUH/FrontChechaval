@@ -34,6 +34,17 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
+  /* a {
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: #ffcc01;
+          color: black;
+        }
+      */
 }
 
 .section .centro {
@@ -321,8 +332,39 @@ body .botones .botonD:hover {
   width: 80vw;
 }
 
+.contenedorMesas {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
 
-=======
+.contenedorMesas .mesasUnicas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: bisque;
+  width: 15vw;
+  max-width: 15vw;
+  text-align: center;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 .contenedorMesas {
   margin-top: 4rem;
   display: -webkit-box;
@@ -400,9 +442,14 @@ body .botones .botonD:hover {
 .producto:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-
 }
 
+
+.carritoSection {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .chango {
@@ -467,4 +514,7 @@ body .botones .botonD:hover {
   transition: transform .30s, -webkit-transform .30s;
 }
 
+section {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
