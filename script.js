@@ -159,7 +159,8 @@ const pintarMesas = async (mesasArray, zona) => {
     p1$$.innerText = mesas.name;
     p2$$.innerText = mesas.comensales;
     button1$$.setAttribute('onclick', "asignarMesa('" + mesas._id + "')");
-    button1$$.innerText = '+';
+    button1$$.innerText = 'Add';
+    pPrincipal$$.className ="tituloMesa"
     div$$.appendChild(p1$$);
     div$$.appendChild(p2$$);
     div$$.appendChild(button1$$);

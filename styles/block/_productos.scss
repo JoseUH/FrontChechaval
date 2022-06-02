@@ -1,0 +1,86 @@
+.fondo {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+
+  &_contenedor-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10vw;
+    max-width: 15vw;
+
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 1rem;
+    & > img {
+      width: 10vw;
+    }
+    & > p {
+      text-align: center;
+    }
+  }
+  .fondo_contenedor-producto {
+    @include tablet {
+      min-width: 10vw;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    background-color: #f5e9e2;
+    border-radius: 10px;
+    text-align: center;
+
+    .buttonPlus {
+        
+      @include tablet {
+        width: 20px;
+        height: 20px;
+      }
+      width: 50%;
+      height: 80%;
+      border: none;
+      border-radius: 10px;
+      background-color: #d44d5c;
+      cursor: pointer;
+    }
+  }
+}
+
+.cerveza {
+  display: flex;
+}
+.cocktel {
+  display: none;
+}
+.sinAlcohol {
+  display: none;
+}
+
+.fondoI {
+  width: 80vw;
+}
+
+.texto {
+  object-fit: cover;
+  @include tablet {
+    font-size: 0ch;
+  }
+}
+.producto {
+  @include tablet {
+    height: 80px;
+
+    width: 80px;
+
+    object-fit: cover;
+  }
+
+  height: 10vw;
+  width: 10vw;
+
+  object-fit: cover;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}

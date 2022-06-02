@@ -1,0 +1,43 @@
+.contenedorMesas{
+
+    @include tablet {
+        
+        display: flex;
+       flex-wrap: wrap-reverse;
+       justify-content: space-between;
+       text-align: center;
+       align-items: flex-end;
+      }
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    text-align: center;
+
+    .mesasUnicas{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: bisque;
+        width: 15vw;
+        
+        text-align: center;
+        border: 1px solid black;
+        margin: 1rem;
+        padding: 1rem;  
+        border-radius: 10px; 
+        
+    }
+    .tituloMesa{
+
+        @include tablet {
+            
+            font-size: 15px;
+            
+          }
+    
+        color: white;
+        font-size: 35px;
+    }
+}
