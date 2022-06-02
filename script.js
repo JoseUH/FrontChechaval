@@ -208,7 +208,7 @@ const addItem = (id, producto, precio) => {
   const removeItem$$ = document.createElement('button');
   const inputProducto$$ = document.createElement('input');
 
-  inputProducto$$.setAttribute("type", "hiddden");
+  inputProducto$$.setAttribute("type", "hidden");
   inputProducto$$.setAttribute("class", "id_carta"); 
   inputProducto$$.setAttribute("value", ""+id+"");  
 
@@ -222,6 +222,7 @@ removeItem$$.className = 'Quitar1'
   removeItem$$.innerText = 'Quitar';
 
   divAddItem$$.appendChild(pID$$);
+  divAddItem$$.appendChild(inputProducto$$);
   divAddItem$$.appendChild(pProducto$$);
   divAddItem$$.appendChild(pPrecio$$);
   divAddItem$$.appendChild(removeItem$$);
