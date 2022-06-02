@@ -259,6 +259,7 @@ body {
   width: 80vw;
 }
 
+
 .fondo_contenedor-producto {
   background-color: #F5E9E2;
 }
@@ -302,5 +303,40 @@ body {
 .producto:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+
 }
+
+.contenedorMesas {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.contenedorMesas .mesasUnicas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: bisque;
+  width: 15vw;
+  max-width: 15vw;
+  text-align: center;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */

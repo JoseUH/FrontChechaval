@@ -169,6 +169,30 @@ height: 20vh;
     width: 80vw;
 }
 
+
+
+
+.contenedorMesas{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    text-align: center;
+    .mesasUnicas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: bisque;
+        width: 15vw;
+        max-width: 15vw;
+        text-align: center;
+        border: 1px solid black;
+        margin: 1rem;
+        padding: 1rem;   
+    }
+}
+
+
 .fondo_contenedor-producto{
     @include tablet {
         
